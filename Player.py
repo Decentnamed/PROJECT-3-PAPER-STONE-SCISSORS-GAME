@@ -3,29 +3,27 @@
 class Player:
     def __init__(self, name):
         self.name = name
-        self.lifes = 3
-        self.selected_option = ""
+        self.score = 0
     
+    # method for option select by Player
     def select_option(self):
-        option = int(input("Type option: "))
-        typed = False
-        while(typed):
+        while True:
+            option = input(f"{self.name}, Type option: paper, stone, scissors: ")
             if option == "paper":
-                typed = True
-                return option
+                break
             elif option == "stone":
-                typed = True
-                return option
+                break
             elif option == "scissors":
-                typed = True
-                return option
+                break
             else:
-                wrong = "wrong type, try again"
-                typed = False
-                return wrong
-    
-    def lose_life(self):
-        self.lifes -= 1
+                print("wrong type, try again")
 
-    def get_lifes(self):
-        self.lifes
+    def add_score(self):
+        self.score += 1
+
+    def get_name(self):
+        return self.name
+
+    def get_score(self):
+        return self.score
+                
