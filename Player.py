@@ -10,11 +10,11 @@ class Player:
         while True:
             option = input(f"{self.name}, Type option: paper, stone, scissors: ")
             if option == "paper":
-                break
+                return option
             elif option == "stone":
-                break
+                return option
             elif option == "scissors":
-                break
+                return option
             else:
                 print("wrong type, try again")
 
